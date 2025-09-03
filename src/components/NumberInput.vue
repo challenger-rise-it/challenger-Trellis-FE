@@ -38,18 +38,15 @@ export default {
   },
   data() {
     return {
-      // Local copy of the number for v-model binding
       localNumber: this.number,
     };
   },
   methods: {
-    // Handle input update and emitting value
     updateNumber(value) {
       this.$emit('update:number', value);
-      this.initValue();  // Call initValue after updating
+      this.initValue(); 
     },
 
-    // Handle button click for GET and POST
     handleFetch(method) {
       if (method === 'GET') {
         this.fetchGet();
@@ -59,7 +56,6 @@ export default {
     },
   },
   watch: {
-    // Watch for external changes to the 'number' prop and sync with localNumber
     number(newValue) {
       this.localNumber = newValue;
     },
@@ -68,5 +64,4 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped styles for the component */
 </style>
