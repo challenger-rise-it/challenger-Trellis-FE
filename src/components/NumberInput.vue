@@ -1,6 +1,5 @@
 <template>
   <div class="p-4">
-    <!-- Input for number with two-way binding -->
     <input
       v-model="localNumber"
       type="number"
@@ -8,7 +7,6 @@
       class="w-full p-2 border rounded-md mb-4"
     />
 
-    <!-- Button Group for GET and POST Actions -->
     <div class="flex justify-between gap-4 mb-2">
       <button @click="handleFetch('GET')" class="bg-green-500 text-white p-2 rounded-md w-1/2">GET</button>
       <button @click="handleFetch('POST')" class="bg-blue-500 text-white p-2 rounded-md w-1/2">POST</button>
